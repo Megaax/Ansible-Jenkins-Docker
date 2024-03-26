@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/Megaax/Ansible-Jenkins-Docker.git'
+            }
+        }
+
+        stage('Copy Files to Docker Server') {
+            steps {
+                sh 'scp -r /var/lib/jenkins/workspace/ansible-jenkins-pipeline/app root@54.210.236.124:~/project/'
+            }
+        }
+
+        stage('Deploy Container with Ansible') {
+            steps {
+                sh 'ansible-playbook /var/lib/jenkins/playbooks/deployment.yaml'
+            }
+        }
+    }
+}

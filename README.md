@@ -1,6 +1,6 @@
 # Ansible Jenkins Docker Project
 
-![Project-Overview](image.png)
+![Project-Overview](imageoverview.png)
 
 ## Overview
 

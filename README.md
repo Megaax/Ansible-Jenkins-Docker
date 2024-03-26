@@ -24,4 +24,5 @@ The Ansible Jenkins Docker project is a comprehensive solution for automating th
 
 - `ansible-palybooks/`: Contains Ansible playbooks and configuration files.
 - `jenkinsfile`: Jenkinsfile for pipeline execution.
+- `Dockerfile`: Dockerfile to specify docker image.
 - `infra/`: Terraform configuration files for infrastructure provisioning.
